@@ -21,8 +21,7 @@ from reportlab.lib.enums import TA_LEFT, TA_CENTER, TA_JUSTIFY, TA_RIGHT
 from reportlab.lib.units import cm
 
 from reportlab.lib import colors
-from reportlab.lib.pagesizes import A4
-from reportlab.lib.pagesizes import letter
+from reportlab.lib.pagesizes import A4, letter
 
 
 # used to mark translateable strings:
