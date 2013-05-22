@@ -455,8 +455,8 @@ class RlWriter(object):
             elements.append(self.addDummyPage())
         got_chapter = False
         item_list = self.env.metabook.walk()
-        if not self.fail_safe_rendering:
-            elements.append(TocEntry(txt=_('Articles'), lvl='group'))
+        #if not self.fail_safe_rendering:
+        #    elements.append(TocEntry(txt=_('Articles'), lvl='group'))
         for (i, item) in enumerate(item_list):
             if item.type == 'chapter':
                 chapter = parser.Chapter(item.title.strip())

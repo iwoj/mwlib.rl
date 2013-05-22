@@ -61,7 +61,7 @@ show_page_header = True
 show_page_footer = True
 page_break_after_article = False
 
-show_article_attribution = True   # Show/Hide article source and contributors
+show_article_attribution = False # Show/Hide article source and contributors
 show_article_hr = True           # Underline each article header by a horizontal rule
 
 # NOTE: strings can contain reportlab styling tags the text needs to be xml excaped.
