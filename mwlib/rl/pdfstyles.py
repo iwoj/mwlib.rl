@@ -22,6 +22,7 @@ from reportlab.lib.units import cm
 
 from reportlab.lib import colors
 from reportlab.lib.pagesizes import A4
+from reportlab.lib.pagesizes import letter
 
 
 # used to mark translateable strings:
@@ -41,7 +42,7 @@ rl_config.canvas_basefontname = default_font
 
 ######### PAGE CONFIGURATION
 
-page_width, page_height = A4   # roughly: pW= 21*cm pH=29*cm
+page_width, page_height = letter   # roughly: pW= 21*cm pH=29*cm
 
 page_margin_left = 2 * cm
 page_margin_right = 2 * cm
