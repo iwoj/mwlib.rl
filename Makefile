@@ -1,5 +1,5 @@
 GITVERSIONFILE = mwlib/rl/_gitversion.py
-RST2HTML ?= rst2html.py
+RST2HTML ?= rst2html
 
 all:: messages README.html MANIFEST.in
 
