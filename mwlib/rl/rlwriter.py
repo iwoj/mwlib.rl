@@ -768,6 +768,7 @@ class RlWriter(object):
         if self.layout_status:
             self.layout_status(article=article.caption)
             self.articlecount += 1
+            self.url_map[self.articlecount] = {}
         elements = []
         if hasattr(self, 'doc'): # doc is not present if tests are run
             elements.append(self._getPageTemplate(title))
@@ -1251,11 +1252,11 @@ class RlWriter(object):
         if href.startswith('//'):
             href = 'http:' + href
         if not self.ref_mode and not self.reference_list_rendered:
-            if not self.url_map.get(href):
+            if not self.url_map[self.articlecount].get(href):
                 i = parser.Item()
                 i.children = [advtree.URL(href)]
                 self.references.append(i)
-                self.url_map[href] = len(self.references)
+                self.url_map[self.articlecount][href] = len(self.references)
         else: # we are writing a reference section. we therefore directly print URLs
             txt = self.renderInline(obj)
             if any([href.startswith(url) for url in pdfstyles.url_blacklist]):
@@ -1264,10 +1265,10 @@ class RlWriter(object):
             return [''.join(txt)]
 
         if not obj.children:
-            linktext = '<link href="%s">[%s]</link>' % (xmlescape(href), self.url_map[href])
+            linktext = '<link href="%s">[%s]</link>' % (xmlescape(href), self.url_map[self.articlecount][href])
         else:
             linktext = self.renderInline(obj)
-            linktext.append(' <super><link href="%s"><font size="10">[%s]</font></link></super> ' % (xmlescape(href), self.url_map[href]))
+            linktext.append(' <super><link href="%s"><font size="10">[%s]</font></link></super> ' % (xmlescape(href), self.url_map[self.articlecount][href]))
             linktext = ''.join(linktext).strip()
         return linktext
 
