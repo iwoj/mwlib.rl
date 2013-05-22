@@ -55,7 +55,7 @@ footer_margin_hor = 1.5 * cm
 footer_margin_vert= 1.5 * cm
 
 show_title_page = True
-show_title_page_footer = True
+show_title_page_footer = False
 show_page_header = True 
 show_page_footer = True
 page_break_after_article = False
