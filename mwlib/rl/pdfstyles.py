@@ -41,7 +41,7 @@ rl_config.canvas_basefontname = default_font
 
 ######### PAGE CONFIGURATION
 
-page_width, page_height = letter   # roughly: pW= 21*cm pH=29*cm
+page_width, page_height = letter # or A4
 
 page_margin_left = 2 * cm
 page_margin_right = 2 * cm
