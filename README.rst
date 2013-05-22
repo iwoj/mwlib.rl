@@ -16,6 +16,8 @@ Installation
 Please read http://mwlib.readthedocs.org/en/latest/installation.html
 for installation instructions.
 
+(To install from sourcecode, type "make pip-install".)
+
 PDF Customization
 ======================================================================
 
