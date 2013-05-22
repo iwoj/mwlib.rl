@@ -94,7 +94,7 @@ class WikiPage(PageTemplate):
         else:
             h_pos = header_margin_hor
             d = canvas.drawString
-        d(h_pos, page_height - header_margin_vert + 0.1 * cm, "%d" % doc.page)
+        #d(h_pos, page_height - header_margin_vert + 0.1 * cm, "%d" % doc.page)
 
         #Footer
         canvas.saveState()
@@ -105,6 +105,7 @@ class WikiPage(PageTemplate):
             p.canv = canvas
             w,h = p.wrap(page_width - header_margin_hor*2.5, page_height)
             p.drawOn(canvas, footer_margin_hor, footer_margin_vert - 10 - h)
+            d(page_width/2, footer_margin_vert - 15 - h, "%d" % doc.page)
         canvas.restoreState()
 
 
